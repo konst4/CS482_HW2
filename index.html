@@ -17,40 +17,96 @@
 
 <section class="main-content">
     <h3>
-        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Report Canny:</h3>
+        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span
+                aria-hidden="true" class="octicon octicon-link"></span></a>Report Canny:</h3>
 
-    <p>For Canny I choose different thresholds for all five of the images.For the first image I choose 130 for the minVal.This eliminates the edges that are below this value. For the max val i choose 200. Which means that if you are above the maxVal you are considered a sure edge. If you are in the inbetween minVal and maxVal  and the value is not connected to a sure edge it will be discarded.For many of the images it was hard to capture all the edges without
-    losing some edges. If you try to capture all of the edges there will be a lot of noise in the picture.This becomes a problem when applying Hough Line transformation.</p>
-    <p>For the other image I choose 90 for min Val and 150 for max val in order to capture the seats as best as I could. The main problem is that by capturing the seats a lot
-    of noise was captured also. </p>
-    <p>For the third picture I choose a higher max value of 200 to get rid of some of the lines it was detecting that I did not considered to be valid.This photo came out better than the other photos. As you can see the tree outside the window was also caputered</p>
-    <p>For the fourth picture I choose a lower min Val of 70 in order to get rid  of some noise.I used the same max value.  </p>
-    <p>For the last picture I choose the same values for the third image. This allowed me to capture the border of the windows and even the bottom border of the flooring. Unfortunately there is still some noise on the right side of the image due to shadows and other features.</p>
+    <p>For Canny I choose different thresholds for all five of the images.For the first image I choose 130 for the
+        minVal.This eliminates the edges that are below this value. For the max val i choose 200. Which means that if
+        you are above the maxVal you are considered a sure edge. If you are in the inbetween minVal and maxVal and the
+        value is not connected to a sure edge it will be discarded.For many of the images it was hard to capture all the
+        edges without
+        losing some edges. If you try to capture all of the edges there will be a lot of noise in the picture.This
+        becomes a problem when applying Hough Line transformation.</p>
+    <p>For the other image I choose 90 for min Val and 150 for max val in order to capture the seats as best as I could.
+        The main problem is that by capturing the seats a lot
+        of noise was captured also. </p>
+    <p>For the third picture I choose a higher max value of 200 to get rid of some of the lines it was detecting that I
+        did not considered to be valid.This photo came out better than the other photos. As you can see the tree outside
+        the window was also caputered</p>
+    <p>For the fourth picture I choose a lower min Val of 70 in order to get rid of some noise.I used the same max
+        value. </p>
+    <p>For the last picture I choose the same values for the third image. This allowed me to capture the border of the
+        windows and even the bottom border of the flooring. Unfortunately there is still some noise on the right side of
+        the image due to shadows and other features.</p>
     <h3>
-        <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Report Standard Hough:</h3>
+        <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true"
+                                                                                                      class="octicon octicon-link"></span></a>Report
+        Standard Hough:</h3>
 
-    <p>For the hough transformation I choose a p value of 1 and a theta value of pi/180. These values ensure that almost all pixels are checked for possible lines.
-    For the first image I choose a threshold of 145  which means that is the minimum vote to be considered a line. This gave a decent amount of lines.</p>
-    <p>For the other images I choose values above 200 in order to capture not too many lines. With a low threshold hough transformation finds many lines that should not be considered lines.</p>
-
-    <h3>
-        <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Report Probabilistic Hough: </h3>
-
-    <p>For the probabilistic transformation the thresholds were all very low compared to the standard.For the first image I used a threshold of 10.To try to capture all the possible lines generated.I choose a minLinelength of 50 to prevent from short lines being detected. I also choose a maxLineGap of 30 which will consider lines close together as the same line.
-     These settings hold true for image2 but I used a higher threshold because I was getting too many lines.For the other images I used a low threshold that was generally less than 10 ,low minLineLength  and maxLineGap.</p>
-
+    <p>For the hough transformation I choose a p value of 1 and a theta value of pi/180. These values ensure that almost
+        all pixels are checked for possible lines.
+        For the first image I choose a threshold of 145 which means that is the minimum vote to be considered a line.
+        This gave a decent amount of lines.</p>
+    <p>For the other images I choose values above 200 in order to capture not too many lines. With a low threshold hough
+        transformation finds many lines that should not be considered lines.</p>
 
     <h3>
-        <a  class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Conclusion: </h3>
-            <p>For the Standard Hough Transformation, I generally noticed that higher thresholds are needed otherwise too many lines will be detected.For the Probabilistic Hough Transformation thresholds should be generally low. I had a tough
-            time being able to detect all the lines using the probabilistic transformation.One of the main problems is to detect edges with Canny without getting noise. This affects the entire process of Hough transformation since we are using it to aid in the detection of lines.</p>
+        <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span
+                aria-hidden="true" class="octicon octicon-link"></span></a>Report Probabilistic Hough: </h3>
 
-    <a  class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Original Images: </h3>
+    <p>For the probabilistic transformation the thresholds were all very low compared to the standard.For the first
+        image I used a threshold of 10.To try to capture all the possible lines generated.I choose a minLinelength of 50
+        to prevent from short lines being detected. I also choose a maxLineGap of 30 which will consider lines close
+        together as the same line.
+        These settings hold true for image2 but I used a higher threshold because I was getting too many lines.For the
+        other images I used a low threshold that was generally less than 10 ,low minLineLength and maxLineGap.</p>
+
+
+    <h3>
+        <a class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true"
+                                                                                   class="octicon octicon-link"></span></a>Conclusion:
+    </h3>
+    <p>For the Standard Hough Transformation, I generally noticed that higher thresholds are needed otherwise too many
+        lines will be detected.For the Probabilistic Hough Transformation thresholds should be generally low. I had a
+        tough
+        time being able to detect all the lines using the probabilistic transformation.One of the main problems is to
+        detect edges with Canny without getting noise. This affects the entire process of Hough transformation since we
+        are using it to aid in the detection of lines.</p>
+
+    <h3>
+        <a class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true"
+                                                                                   class="octicon octicon-link"></span></a>Original
+        Images: </h3>
     <img src="ST2MainHall4001.jpg">
     <img src="ST2MainHall4013.jpg">
     <img src="ST2MainHall4051.jpg">
     <img src="ST2MainHall4065.jpg">
     <img src="ST2MainHall4073.jpg">
+    <h3>
+        <a class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true"
+                                                                                   class="octicon octicon-link"></span></a>Canny
+        Images: </h3>
+    <img src="edges1.jpg">
+    <img src="edges2.jpg">
+    <img src="edges3.jpg">
+    <img src="edges4.jpg">
+    <img src="edges5.jpg">
+    <a class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true"
+                                                                               class="octicon octicon-link"></span></a>Standard Hough
+    Images: </h3>
+    <img src="houghlineS1.jpg">
+    <img src="houghlineS2.jpg">
+    <img src="houghlineS3.jpg">
+    <img src="houghlineS4.jpg">
+    <img src="houghlineS5.jpg">
+    <a class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true"
+                                                                               class="octicon octicon-link"></span></a>Probabilistic Hough
+    Images: </h3>
+    <img src="houghlineP1.jpg">
+    <img src="houghlineP2.jpg">
+    <img src="houghlineP3.jpg">
+    <img src="houghlineP4.jpg">
+    <img src="houghlineP5.jpg">
 </section>
 
 
